@@ -1,6 +1,7 @@
 import React from 'react'
 import './Checkout.css';
 import Subtotal from './Subtotal'
+import CheckProduct from './CheckProduct';
 
 function Checkout() {
   return (
