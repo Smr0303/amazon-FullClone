@@ -17,6 +17,9 @@ function App() {
           <Route  path='/checkout'>
             <Checkout/>
           </Route>
+          <Route  path='/login'>
+            <h1>Welcome to login</h1>
+          </Route>
         </Switch>
       </div>
     </Router>
