@@ -29,6 +29,9 @@
     margin-top: 5px;
 
 }
+.productRating{
+    display: flex;
+}
 productInfo{
     height:100px;
     margin-bottom:15px;
