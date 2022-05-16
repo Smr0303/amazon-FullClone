@@ -13,7 +13,7 @@ function Home() {
                         title='Mi 108 cm (43 Inches) 4K Ultra HD Android Smart LED TV 4X|L43M4-4AIN (Black)'
                         price={29999}
                         image='https://images-na.ssl-images-amazon.com/images/I/612oGaxp3DS._SX679_.jpg'
-                        rating={5} />
+                        rating={4} />
                     <Product
                         id='54973821'
                         title='Boult Audio ProBass Thunder Over-Ear Wireless Bluetooth Headphones with Mic, Headset with Passive Noise Cancellation & Long Battery Life'
@@ -27,7 +27,7 @@ function Home() {
                         title='HP Z3700 Wireless Mouse Silver'
                         price={1099}
                         image='https://images-na.ssl-images-amazon.com/images/I/61JJAJc%2BMgL._SY550_.jpg'
-                        rating={5} />
+                        rating={3} />
                     <Product
                         id='94256721'
                         title='OnePlus Nord CE 5G (Charcoal Ink, 12GB RAM, 256GB Storage)'

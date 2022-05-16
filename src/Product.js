@@ -10,7 +10,7 @@ function Product({id,title,image,price,rating}){
              <strong>{price}</strong>
          </p>
          <div className='productRating'>
-             {Array(rating).fill().map((_,i)=><p>⭐</p>)}
+             {Array(rating).fill().map((_,i)=>(<p key={i}>⭐</p>))}
              
              </div>
          <img className='productImage' src={image} alt=""/>
