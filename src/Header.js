@@ -14,6 +14,9 @@ function Header() {
       auth.signOut();
     }
   };
+  const name = (email) => {
+    return email.substring(0, email.lastIndexOf("@"));
+  };
 
   return (
     <div className="header">
@@ -29,9 +32,11 @@ function Header() {
         <SearchIcon className="headerSearchIcon" />
       </div>
       <div className="headerNav">
-        <Link to={!user && '/login'}>
+        <Link to={!user && '/login'} style={{
+          textDecoration:'none',
+        }}>
           <div className="headerOption" onClick={handleSignOut}>
-            <span className="headerOptionLineOne">{user?`Hello${user.email}`:'Hello Guest'}</span>
+            <span className="headerOptionLineOne">{user?`Hello ${name(user.email)}`:'Hello Guest'}</span>
             <span className="headerOptionTwo">
               {user ? "SignOut" : "Sign In"}
             </span>

@@ -9,6 +9,9 @@
     margin-bottom: 10px;
   }
   .checkoutTitle {
+    font-weight: 800;
+    background-color: rgb(8, 8, 8);
+    color:#cd9042;
     margin-right: 10px;
     padding: 10px;
     border-bottom: 1px solid lightgray;

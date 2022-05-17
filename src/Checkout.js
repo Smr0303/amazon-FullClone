@@ -3,9 +3,15 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import CheckProduct from "./CheckProduct";
 import { useStateValue } from "./StateProvider";
+import FlipMove from "react-flip-move";
 
 function Checkout() {
-  const [{ basket,user }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const name = (email) => {
+    return email.substring(0, email.lastIndexOf("@"));
+  };
+
   return (
     <div className="checkout">
       <div className="checkoutLeft">
@@ -13,22 +19,27 @@ function Checkout() {
           className="checkoutAd"
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
           alt=""
-          />
+        />
 
         <div>
-          <h3>Hey   {user?.email}</h3>
-          <h2 className="checkoutTitle">Your basket items are below</h2>
-          {basket.map((ele,i) => {
-            return (
-              <CheckProduct key={i}
-                id={ele.id}
-                title={ele.title}
-                price={ele.price}
-                image={ele.image}
-                rating={ele.rating}
-              />
-            );
-          })}
+          <h2 className="checkoutTitle">
+            {" "}
+            Hey {user ? name(user.email) : "Guest"} Your Cart Items
+          </h2>
+          <Flipmove>
+            {basket.map((ele, i) => {
+              return (
+                <CheckProduct
+                  key={i}
+                  id={ele.id}
+                  title={ele.title}
+                  price={ele.price}
+                  image={ele.image}
+                  rating={ele.rating}
+                />
+              );
+            })}
+          </Flipmove>
         </div>
       </div>
       <div className="checkoutRight">
