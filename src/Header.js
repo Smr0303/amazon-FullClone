@@ -12,7 +12,7 @@ function Header() {
       <Link to="/">
         <img
           className="headerLogo"
-          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          src=" https://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="logo"
         />
       </Link>
