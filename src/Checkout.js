@@ -3,7 +3,6 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import CheckProduct from "./CheckProduct";
 import { useStateValue } from "./StateProvider";
-import FlipMove from "react-flip-move";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -26,7 +25,6 @@ function Checkout() {
             {" "}
             Hey {user ? name(user.email) : "Guest"} Your Cart Items
           </h2>
-          <Flipmove>
             {basket.map((ele, i) => {
               return (
                 <CheckProduct
@@ -39,7 +37,6 @@ function Checkout() {
                 />
               );
             })}
-          </Flipmove>
         </div>
       </div>
       <div className="checkoutRight">
