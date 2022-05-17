@@ -59,7 +59,7 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     cursor: pointer;
-    transition: ease-in;
+    transition: ease-in 0.5s;
   }
   .login_signin_button:hover{
       transform: scale(1.08);
