@@ -10,7 +10,11 @@ function Login() {
   
    const signIn=e=>{
     e.preventDefault();
-    console.log("Ysessssa")
+    auth.signInWithEmailAndPassword(email,password)
+    .then((auth)=>{
+      history.push("/")
+    })
+    .catch((err)=>alert(err));
    
    }
    const signUp=e=>{
@@ -42,7 +46,6 @@ function Login() {
                 <h5>Password</h5>
                 <input autoComplete="on" type="password" password={password} onChange={(e)=>{
                     setPassword(e.target.value);
-                    console.log(password)
                 }}/>
 
                 <button type="submit" className="login_signin_button">SignIn</button>
