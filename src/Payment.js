@@ -4,9 +4,11 @@ import CheckProduct from "./CheckProduct";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
+import { useHistory } from "react-router-dom";
 import axios from "./axios";
-
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+
+
 function Payment() {
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState(false);
@@ -14,6 +16,7 @@ function Payment() {
   const [disabled, setDisabled] = useState("");
   const [{ basket, user }] = useStateValue();
   const [ClientSecret, setClientSecret] = useState("");
+  const history=useHistory();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -23,11 +26,13 @@ function Payment() {
         method: "POST",
         url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
-      console.log(response);
-      setClientSecret(response.data.ClientSecret);
+      console.log(response.data.clientSecret);
+      setClientSecret(response.data.clientSecret);
     };
     getClientSecret();
   }, [basket]);
+
+  console.log ("The secret key isss",ClientSecret);
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -40,7 +45,7 @@ function Payment() {
       setSucceeded(true);
       setError(null);
       setProcessing(false); 
-      history.replaceState('/orders');
+      history.replace('/orders');
     })
   };
 
