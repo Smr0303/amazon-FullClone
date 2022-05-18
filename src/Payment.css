@@ -43,6 +43,10 @@
     font-weight: bolder;
     padding: 5px;
     cursor: pointer;
+    transition: all 0.8s;
+  }
+  .paymentDetails > form > div > button:hover{
+    transform: scale (1.08);
   }
   .paymentPriceContainer {
     margin-top: 20px;
