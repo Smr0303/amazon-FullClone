@@ -3,7 +3,7 @@ import "./CheckProduct.css";
 import { useStateValue } from "./StateProvider";
 import CurrencyFormat from "react-currency-format";
 
-function CheckProduct({ id, title, image, price, rating }) {
+function CheckProduct({ id, title, image, price, rating, hideButton }) {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () =>
@@ -33,8 +33,8 @@ function CheckProduct({ id, title, image, price, rating }) {
                     <p key={i}> ⭐ </p>
                   ))}
               </div>
-
-              <button onClick={removeFromBasket}>Remove from Basket</button>
+              {!hideButton && <button onClick={removeFromBasket}>Remove from Basket</button>
+            }
             </div>
           </>
         )}
