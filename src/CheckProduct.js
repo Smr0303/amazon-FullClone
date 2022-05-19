@@ -42,7 +42,7 @@ function CheckProduct({ id, title, image, price, rating }) {
         value={price}
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"₹"}
       />
     </div>
   );
