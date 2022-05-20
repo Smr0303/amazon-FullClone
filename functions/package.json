@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
-    "start": "npm run shell",
+    "start": "node index.js",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
@@ -18,8 +18,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.0",
     "heroku": "^7.60.2",
     "nodemon": "^2.0.16",
     "stripe": "^9.1.0"
@@ -29,5 +27,10 @@
     "eslint-config-google": "^0.14.0",
     "firebase-functions-test": "^0.2.0"
   },
-  "private": true
+  
+  "private": true,
+  "engines": {
+    "node": "14.19.3",
+    "npm":"8.4.0"
+  }
 }
