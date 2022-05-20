@@ -9,6 +9,7 @@ import Footer from './Footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Loading from './Loading';
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
@@ -19,6 +20,7 @@ const promise = loadStripe(
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
+
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -48,6 +50,9 @@ function App() {
           <Route path="/orders">
             <Header/>
             <Orders />
+          </Route>
+          <Route path="/load">
+            <Loading/>
           </Route>
 
           <Route path="/checkout">

@@ -7,6 +7,9 @@ import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 const container = document.getElementById("root");
 const root = createRoot(container);
+
+
+
 root.render(
  
   <StateProvider initialState={initialState} reducer={reducer}>
