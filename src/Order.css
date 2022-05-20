@@ -9,6 +9,8 @@
     position: absolute;
     top: 39px;
     right: 20px;
+    font-weight: 800;
+    font-size: large;
   }
   .orderTotal {
     font-weight: 499;

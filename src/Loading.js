@@ -8,10 +8,10 @@ export default function Loading() {
     
     >
       <BookLoader
-        background={"linear-gradient(135deg, #6066FA, #4645F6)"}
+        background={"linear-gradient(135deg, #cd9042, #cd9042)"}
         desktopSize={"100px"}
         mobileSize={"80px"}
-        textColor={"#4645F6"}
+        textColor={"#cd9042"}
       />
     </div>
   );
