@@ -1,0 +1,125 @@
+[debug] [2022-05-20T05:31:12.272Z] ----------------------------------------------------------------------
+[debug] [2022-05-20T05:31:12.274Z] Command:       /snap/node/6331/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2022-05-20T05:31:12.275Z] CLI Version:   10.9.2
+[debug] [2022-05-20T05:31:12.275Z] Platform:      linux
+[debug] [2022-05-20T05:31:12.275Z] Node Version:  v14.19.3
+[debug] [2022-05-20T05:31:12.302Z] Time:          Fri May 20 2022 11:01:12 GMT+0530 (India Standard Time)
+[debug] [2022-05-20T05:31:12.302Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-20T05:31:12.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-20T05:31:12.374Z] > authorizing via signed-in user (samarmohite7@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2022-05-20T05:31:12.394Z] [hub] writing locator at /tmp/hub-fullclone-70887.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] ⚠  Your requested "node" version "16" doesn't match your global version "14". Using node@14 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"14\". Using node@14 from host."}}
+[debug] [2022-05-20T05:31:12.416Z] defaultcredentials: writing to file /home/lenovo/.config/firebase/samarmohite7_gmail_com_application_default_credentials.json
+[debug] [2022-05-20T05:31:12.418Z] Setting GAC to /home/lenovo/.config/firebase/samarmohite7_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/lenovo/.config/firebase/samarmohite7_gmail_com_application_default_credentials.json"}}
+[debug] [2022-05-20T05:31:12.420Z] > refreshing access token with scopes: []
+[debug] [2022-05-20T05:31:12.421Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-20T05:31:12.720Z] <<< HTTP RESPONSE 200 {"date":"Fri, 20 May 2022 05:31:12 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-20T05:31:12.734Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/adminSdkConfig [none]
+[debug] [2022-05-20T05:31:13.338Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/adminSdkConfig 200
+[debug] [2022-05-20T05:31:13.338Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/adminSdkConfig {"projectId":"fullclone-70887","storageBucket":"fullclone-70887.appspot.com","locationId":"us-central"}
+[debug] [2022-05-20T05:31:13.348Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/fullclone-70887/sites 
+[debug] [2022-05-20T05:31:15.274Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/fullclone-70887/sites 200
+[debug] [2022-05-20T05:31:15.274Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/fullclone-70887/sites {"sites":[{"name":"projects/fullclone-70887/sites/fullclone-70887","defaultUrl":"https://fullclone-70887.web.app","appId":"1:391445635272:web:5724c0a7474b63308e05fd","type":"DEFAULT_SITE"}]}
+[debug] [2022-05-20T05:31:15.274Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/webApps/1:391445635272:web:5724c0a7474b63308e05fd/config [none]
+[debug] [2022-05-20T05:31:16.704Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/webApps/1:391445635272:web:5724c0a7474b63308e05fd/config 200
+[debug] [2022-05-20T05:31:16.705Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fullclone-70887/webApps/1:391445635272:web:5724c0a7474b63308e05fd/config {"projectId":"fullclone-70887","appId":"1:391445635272:web:5724c0a7474b63308e05fd","storageBucket":"fullclone-70887.appspot.com","locationId":"us-central","apiKey":"AIzaSyA-po9zZGNWka37t1d71mRDD5n6WfdiR1Y","authDomain":"fullclone-70887.firebaseapp.com","messagingSenderId":"391445635272","measurementId":"G-LV01JDJVWQ"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-05-20T05:31:16.742Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-05-20T05:31:16.743Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-05-20T05:31:16.743Z] Starting Emulator UI with command {"binary":"node","args":["/home/lenovo/.cache/firebase/emulators/ui-v1.7.0/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/lenovo/.cache/firebase/emulators/ui-v1.7.0/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[info] i  functions: Watching "/home/lenovo/Documents/Cloned/amazon-clone/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/lenovo/Documents/Cloned/amazon-clone/functions\" for Cloud Functions..."}}
+[debug] [2022-05-20T05:31:17.278Z] Validating nodejs source
+[debug] [2022-05-20T05:31:18.229Z] getFunctionsSDKVersion encountered error:Unexpected end of JSON input {}
+[debug] [2022-05-20T05:31:18.230Z] checkFunctionsSDKVersion encountered error:Invalid Version:  {}
+[debug] [2022-05-20T05:31:18.231Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^9.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-05-20T05:31:18.232Z] Building nodejs source
+[debug] [2022-05-20T05:31:18.232Z] Analyzing nodejs backend spec
+[debug] [2022-05-20T05:31:19.127Z] getFunctionsSDKVersion encountered error:Unexpected end of JSON input {}
+[debug] [2022-05-20T05:31:20.151Z] getFunctionsSDKVersion encountered error:Unexpected end of JSON input {}
+[debug] [2022-05-20T05:31:20.151Z] Could not parse firebase-functions version '' into semver. Falling back to parseTriggers.
+[info] ✔  functions[us-central1-api]: http function initialized (http://localhost:5001/fullclone-70887/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/fullclone-70887/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ localhost:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-05-20T05:31:51.658Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-05-20T05:31:51.659Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-05-20T05:31:51.660Z] Accepted request POST /fullclone-70887/us-central1/api/payments/create?total=3119800 --> us-central1-api
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-05-20T05:31:51.683Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-05-20T05:31:51.684Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-05-20T05:31:51.684Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-05-20T05:31:51.685Z] [worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: Assigning socketPath: /tmp/fire_emu_3841.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: Assigning socketPath: /tmp/fire_emu_3841.sock"}}
+[debug] [2022-05-20T05:31:51.687Z] [worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: BUSY"}}
+[debug] [2022-05-20T05:31:53.034Z] [runtime-status] [3841] Functions runtime initialized. {"cwd":"/home/lenovo/Documents/Cloned/amazon-clone/functions","node_version":"14.19.3"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Functions runtime initialized. {\"cwd\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions\",\"node_version\":\"14.19.3\"}"}}
+[debug] [2022-05-20T05:31:53.037Z] [runtime-status] [3841] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Disabled runtime features: undefined"}}
+[debug] [2022-05-20T05:31:53.045Z] [runtime-status] [3841] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.2.0","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.2.0\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.048Z] [runtime-status] [3841] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.21.2","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.21.2\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.049Z] [runtime-status] [3841] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-05-20T05:31:53.053Z] [runtime-status] [3841] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.21.2","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.21.2\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.109Z] [runtime-status] [3841] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-05-20T05:31:53.110Z] [runtime-status] [3841] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.21.2","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.21.2\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-05-20T05:31:53.113Z] [runtime-status] [3841] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.21.2","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.21.2\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.114Z] [runtime-status] [3841] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.2.0","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.2.0\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.115Z] [runtime-status] [3841] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.21.2","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.21.2\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-05-20T05:31:53.116Z] [runtime-status] [3841] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.2.0","resolution":"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.2.0\",\"resolution\":\"/home/lenovo/Documents/Cloned/amazon-clone/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-05-20T05:31:53.213Z] [runtime-status] [3841] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-05-20T05:31:53.215Z] [runtime-status] [3841] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Running api in signature http"}}
+[debug] [2022-05-20T05:31:53.220Z] [runtime-status] [3841] Attempting to listen to socketPath: /tmp/fire_emu_3841.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Attempting to listen to socketPath: /tmp/fire_emu_3841.sock"}}
+[debug] [2022-05-20T05:31:53.223Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-05-20T05:31:53.224Z] [functions] Got req.url=/fullclone-70887/us-central1/api/payments/create?total=3119800, mapping to path=/payments/create?total=3119800 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/fullclone-70887/us-central1/api/payments/create?total=3119800, mapping to path=/payments/create?total=3119800"}}
+[debug] [2022-05-20T05:31:53.233Z] [runtime-status] [3841] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Ephemeral server handling POST request"}}
+[info] >  3119800 {"user":3119800,"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m 3119800"}}
+[debug] [2022-05-20T05:31:53.253Z] [runtime-status] [3841] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [3841] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-05-20T05:31:53.903Z] [worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-c9cd73d3-39f7-4980-876f-dbcae5fc8a3b]: IDLE"}}
+[debug] [2022-05-20T05:31:53.903Z] [work-queue] {"queueLength":0,"workRunningCount":0}
