@@ -1,7 +1,7 @@
 require('dotenv').config();
-const functions = require("firebase-functions");
 const express=require('express');
 const cors=require('cors');
+const port=process.env.PORT||8000;
 const stripe= require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app=express();
@@ -35,4 +35,8 @@ app.post("/payments/create", async (request, response) => {
       });
     }
   });
-exports.api=functions.https.onRequest(app);
+
+
+  app.listen(port,()=>{
+    console.log("Bommm",port);
+  })
