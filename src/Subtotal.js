@@ -6,7 +6,7 @@ import {getBasketTotal} from './reducer';
 import {useHistory} from 'react-router-dom'
 function Subtotal() {
  
-    const [{basket},dispatch]=useStateValue();
+    const [{basket,user},dispatch]=useStateValue();
     const history=useHistory();
     
 
@@ -31,7 +31,15 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={"$"}
                 />
-                <button  onClick={(e)=>history.push('/payment')}>Proceed to checkout</button>
+                <button  onClick={(e)=>{
+                    if(user){
+                        history.push('/payment')
+                    }
+                    else{
+                        alert("You Have to SignIn")
+                        history.push('/login')
+                    }}}>Proceed to checkout</button>
+                    
     </div>
   )
 }

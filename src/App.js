@@ -58,7 +58,6 @@ function App() {
               <Orders />
             </Route>
             <Route path="/load"></Route>
-
             <Route path="/checkout">
               <Header />
               <Checkout />

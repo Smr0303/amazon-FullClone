@@ -26,7 +26,6 @@ function Payment() {
         method: "POST",
         url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
-      console.log(response.data.clientSecret);
       setClientSecret(response.data.clientSecret);
     };
     getClientSecret();
@@ -37,32 +36,38 @@ function Payment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setProcessing(true);
-    const payload = await stripe
-      .confirmCardPayment(ClientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement),
-        },
-      })
-      .then(({ paymentIntent }) => {
-        console.log(paymentIntent);
-        db.collection("users")
-          .doc(user?.uid)
-          .collection("orders")
-          .doc(paymentIntent.id)
-          .set({
-            basket: basket,
-            amount: paymentIntent.amount,
-            created: paymentIntent.created,
-          });
+    if (getBasketTotal(basket)) {
+      const payload = await stripe
+        .confirmCardPayment(ClientSecret, {
+          payment_method: {
+            card: elements.getElement(CardElement),
+          },
+        })
+        .then(({ paymentIntent }) => {
+          console.log(paymentIntent);
+          db.collection("users")
+            .doc(user?.uid)
+            .collection("orders")
+            .doc(paymentIntent.id)
+            .set({
+              basket: basket,
+              amount: paymentIntent.amount,
+              created: paymentIntent.created,
+            });
 
-        setSucceeded(true);
-        setError(null);
-        setProcessing(false);
-        dispatch({
-          type: "EMPTY_BASKET",
+          setSucceeded(true);
+          setError(null);
+          setProcessing(false);
+          dispatch({
+            type: "EMPTY_BASKET",
+          });
+          history.replace("/orders");
         });
-        history.replace("/orders");
-      });
+    } else {
+      alert("No items are present in your basket Select some items");
+      setProcessing(false);
+      history.push("/");
+    }
   };
 
   const handleChange = (e) => {

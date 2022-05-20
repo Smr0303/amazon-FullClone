@@ -12,6 +12,8 @@ export default function Loading() {
         desktopSize={"100px"}
         mobileSize={"80px"}
         textColor={"#cd9042"}
+        text={'Please Wait.....'}
+        size={'100px'}
       />
     </div>
   );

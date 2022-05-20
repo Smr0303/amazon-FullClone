@@ -25,7 +25,7 @@ function Login() {
      if(auth){
        history.push("/");
      }
-    }).catch((err)=>console.log(err))
+    }).catch((err)=>alert("User alerady exist please login!!!"))
    }
 
   return (  
